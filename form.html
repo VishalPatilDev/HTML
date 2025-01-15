@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Form</title>
+  </head>
+  <body
+    background="https://t3.ftcdn.net/jpg/06/15/49/68/360_F_615496890_W34yB8VDE6n5pehb5QCt1ek5oEvRo9qA.jpg"
+    style="
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    "
+  ></body>
+  <body>
+    <h1 style="text-align: center; color: #4caf50">User Registration Form</h1>
+
+    <table
+      align="center"
+      border="1"
+      cellpadding="10"
+      cellspacing="0"
+      style="border-collapse: collapse; width: 50%; font-size: 16px"
+    >
+      <form action="#" method="POST">
+        <tr>
+          <td><label style="color: white" for="username">Username: </label></td>
+          <td><input type="text" id="username" name="username" required /></td>
+        </tr>
+        <tr>
+          <td><label style="color: white" for="password">Password:</label></td>
+          <td>
+            <input type="password" id="password" name="password" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label style="color: white" for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td style="color: white">Hobbies:</td>
+          <td>
+            <input type="checkbox" id="hobby1" name="hobby" value="Reading" />
+            <label style="color: white" for="hobby1">Reading</label><br />
+            <input type="checkbox" id="hobby2" name="hobby" value="Traveling" />
+            <label style="color: white" for="hobby2">Traveling</label><br />
+            <input type="checkbox" id="hobby3" name="hobby" value="Gaming" />
+            <label style="color: white" for="hobby3">Gaming</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label style="color: white" for="gender">Gender:</label></td>
+          <td>
+            <input type="radio" id="male" name="gender" value="Male" required />
+            <label style="color: white" for="male">Male</label><br />
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              required
+            />
+            <label style="color: white" for="female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label style="color: white" for="bio">Bio:</label></td>
+          <td><textarea id="bio" name="bio" rows="4" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">
+            <input
+              type="submit"
+              value="Register"
+              style="
+                padding: 5px 15px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                cursor: pointer;
+              "
+            />
+            <input
+              type="reset"
+              value="Reset"
+              style="
+                padding: 5px 15px;
+                background-color: #f44336;
+                color: white;
+                border: none;
+                cursor: pointer;
+              "
+            />
+          </td>
+        </tr>
+      </form>
+    </table>
+
+    <p style="text-align: center; margin-top: 20px; font-size: 18px">
+      <strong style="color: white">Already have an account?</strong>
+      <a
+        href="#"
+        onclick="alert('Login functionality coming soon!');"
+        style="
+          color: rgb(155, 237, 232);
+          text-decoration: none;
+          font-weight: bold;
+        "
+        >Login here</a
+      >.
+    </p>
+  </body>
+</html>
