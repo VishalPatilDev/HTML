@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishal Patil Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+
+      .service {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+
+      .service h3 {
+        color: #333;
+      }
+
+      .contact {
+        background: #333;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 1rem;
+      }
+
+      .contact form {
+        display: inline-block;
+        text-align: left;
+      }
+
+      .contact form input,
+      .contact form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .contact form button {
+        padding: 10px 20px;
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .contact form button:hover {
+        background-color: #ff4500;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to Vishal Patil's Portfolio</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="about">
+      <div class="intro">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Vishal Patil, a passionate software developer specializing in
+          Flutter, Java, and mobile app development. My mission is to create
+          seamless and impactful digital experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2 style="text-align: center">Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Mobile App Development</h3>
+          <p>Creating user-friendly mobile apps using Flutter and Dart.</p>
+        </div>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>
+            Designing and developing responsive websites tailored to your needs.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Java Programming</h3>
+          <p>Building robust backend solutions with Java and Spring Boot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Vishal Patil. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

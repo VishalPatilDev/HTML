@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fddede;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Container Styling */
+      .container {
+        text-align: center;
+        background-color: #ffe6e6;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 350px;
+      }
+
+      /* Header Styling */
+      header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #c80000;
+        margin-bottom: 20px;
+      }
+
+      /* Buttons Styling */
+      .buttons {
+        margin-bottom: 20px;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .pomodoro {
+        background-color: #ff4d4d;
+        color: white;
+      }
+
+      .short-break {
+        background-color: #4da6ff;
+        color: white;
+      }
+
+      .long-break {
+        background-color: #66cc66;
+        color: white;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      /* Timer Styling */
+      .timer {
+        margin: 20px 0;
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Start Button Styling */
+      .start {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 40px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      .start:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">Pomodoro</h1>
+      </header>
+      <main>
+        <div class="buttons">
+          <button class="pomodoro">Pomodoro</button>
+          <button class="short-break">Short Break</button>
+          <button class="long-break">Long Break</button>
+        </div>
+        <div class="timer">
+          <span class="time">25:00</span>
+        </div>
+        <button class="start">Start</button>
+      </main>
+    </div>
+  </body>
+</html>

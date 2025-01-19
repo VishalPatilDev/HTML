@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      /* height: auto; */
+    }
+    .profile {
+      width: 300px;
+      height: auto;
+      border: 2px solid black;
+    }
+    .head {
+      display: flex;
+      height: 40px;
+      justify-content: space-between;
+    }
+    .head #pro_name {
+      margin-top: 0;
+    }
+    .head img {
+      height: 20px;
+      width: 20px;
+    }
+    .propic_section {
+      /* border: 2px solid black; */
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .propic_section #profile_img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .stats h5 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .stats p {
+      margin: 0;
+      font-size: 12px;
+    }
+    #edit_button {
+      margin-top: 10px;
+      width: 300px;
+      height: 20px;
+    }
+    .stories img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .stories {
+      margin-top: 10px;
+      display: flex;
+    }
+    .grid_window {
+      box-sizing: border-box;
+      margin: 0;
+      border: 2px solid black;
+      width: 300px;
+      height: auto;
+    }
+    .grid {
+      margin: 0;
+      /* border: 2px solid black; */
+
+      display: flex;
+      /* flex-direction: row; */
+    }
+    .grid_img img {
+      margin: 0;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+  <body>
+    <div class="profile">
+      <div class="head">
+        <h4 id="pro_name">Vishal Patil</h4>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkNEBO2OUKQjP-RSbIZae3jIq76g3rMrn9vQ&s"
+          alt="menu"
+        />
+      </div>
+      <div class="propic_section">
+        <img
+          id="profile_img"
+          src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_640.png"
+          alt="profile_img"
+        />
+        <div class="stats">
+          <h5>84</h5>
+          <p>Posts</p>
+        </div>
+        <div class="stats">
+          <h5>1,232</h5>
+          <p>Followers</p>
+        </div>
+        <div class="stats">
+          <h5>727</h5>
+          <p>Following</p>
+        </div>
+      </div>
+      <div><button id="edit_button">Edit profile</button></div>
+      <div class="stories">
+        <div class="stats">
+          <img src="IMG_20230128_181915.jpg" alt="story1" />
+          <p>story1</p>
+        </div>
+        <div class="stats">
+          <img src="IMG_20230128_181915.jpg" alt="story2" />
+          <p>story2</p>
+        </div>
+        <div class="stats">
+          <img src="IMG_20230128_181915.jpg" alt="story3" />
+          <p>story3</p>
+        </div>
+      </div>
+
+      <div class="grid_window">
+        <div class="grid">
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20221016_170212 (1).jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+          <div class="grid_img">
+            <img src="IMG_20230128_181915.jpg" alt="img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .insta_post {
+        overflow: hidden;
+        width: 400px;
+        border: 1px solid black;
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+      .profile img {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .profile h4 {
+        margin: 0;
+      }
+      .profile p {
+        margin: 0;
+      }
+      .post_img {
+        width: 100%;
+        height: auto;
+      }
+      .bar {
+        margin: 0;
+        border: 1px solid black;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: list-item;
+        height: 30px;
+      }
+      .bar #love {
+        height: 20px;
+        width: 20px;
+        margin-right: 320px;
+      }
+      .bar #share {
+        height: 20px;
+        width: 20px;
+      }
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .content h4 {
+        /* border: 2px solid black; */
+        margin-top: 0px;
+      }
+      .content p {
+        margin-top: 0px;
+        /* border: 2px solid black; */
+        font-size: small;
+      }
+    </style>
+
+    <div class="insta_post">
+      <div class="profile">
+        <img src="IMG_20230128_181915.jpg" alt="profilePic" />
+        <div>
+          <h4>_vishalll.pvt</h4>
+          <p>Location</p>
+        </div>
+      </div>
+      <img src="IMG_20230128_181915.jpg" alt="postImg" class="post_img" />
+      <div class="bar">
+        <img
+          id="love"
+          src="https://www.kindpng.com/picc/m/48-486744_png-file-svg-instagram-love-icon-png-icon.png"
+          alt="love"
+        />
+        <img
+          id="share"
+          src="https://www.iconpacks.net/icons/4/free-instagram-share-icon-13423-thumb.png"
+          alt="share"
+        />
+      </div>
+      <div class="content">
+        <h4>Vishal Patil</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident,
+          laudantium?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
