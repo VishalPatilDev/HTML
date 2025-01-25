@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Creating Arrays
+      let fruits = ["Apple", "Banana", "Cherry"]; // Using square brackets
+      let numbers = new Array(1, 2, 3, 4); // Using Array constructor
+
+      console.log("Original Fruits Array:", fruits);
+      console.log("Original Numbers Array:", numbers);
+
+      // 2. Accessing Elements
+      console.log("First Fruit:", fruits[0]); // Accessing the first element
+      console.log("Second Number:", numbers[1]); // Accessing the second element
+
+      // 3. Adding and Removing Elements
+      fruits.push("Mango"); // Adding to the end
+      console.log("After Push:", fruits);
+
+      fruits.pop(); // Removing the last element
+      console.log("After Pop:", fruits);
+
+      fruits.shift(); // Removing the first element
+      console.log("After Shift:", fruits);
+
+      fruits.unshift("Grapes"); // Adding to the beginning
+      console.log("After Unshift:", fruits);
+
+      // 4. Finding the Length of the Array
+      console.log("Length of Fruits Array:", fruits.length);
+
+      // 5. Using indexOf
+      let index = fruits.indexOf("Banana");
+      console.log("Index of 'Banana':", index);
+
+      // 6. Using slice (non-destructive)
+      let slicedFruits = fruits.slice(0, 2); // Extracts first two elements
+      console.log("Sliced Fruits:", slicedFruits);
+
+      // 7. Using splice (destructive)
+      fruits.splice(1, 1, "Peach", "Orange"); // Replace "Banana" with "Peach" and "Orange"
+      console.log("After Splice:", fruits);
+
+      // 8. Iterating Over Arrays
+      console.log("Iterating with for loop:");
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+      }
+
+      console.log("Iterating with for...of loop:");
+      for (let num of numbers) {
+        console.log(num);
+      }
+
+      console.log("Iterating with forEach:");
+      numbers.forEach((num) => console.log(num));
+
+      // Final Array States
+      console.log("Final Fruits Array:", fruits);
+      console.log("Final Numbers Array:", numbers);
+    </script>
+  </body>
+</html>

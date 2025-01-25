@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Driven Program</title>
+    <style>
+      body {
+        display: flex;
+        background-color: azure;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        height: 80vh;
+      }
+      .container {
+        background-color: white;
+        border: 2px solid rgb(47, 185, 139);
+        padding: 20px;
+        border-radius: 22px;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+      select,
+      input,
+      button {
+        margin: 10px;
+        padding: 5px;
+      }
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      label {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Menu-Driven Program</h3>
+      <label for="operation">Select an operation:</label>
+      <select id="operation">
+        <option value="factorial">Factorial</option>
+        <option value="palindrome">Palindrome</option>
+        <option value="prime">Prime</option>
+        <option value="strong">Strong Number</option>
+        <option value="armstrong">Armstrong Number</option>
+        <option value="perfect">Perfect Number</option>
+      </select>
+      <label for="num">Enter a number:</label>
+      <input type="text" id="num" placeholder="Enter a number" />
+      <br />
+
+      <br />
+      <button onclick="executeOperation()">Execute</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function executeOperation() {
+        const num = parseInt(document.getElementById("num").value);
+        const operation = document.getElementById("operation").value;
+
+        if (isNaN(num)) {
+          document.getElementById("result").innerText =
+            "Please enter a valid number!";
+          return;
+        }
+
+        let result = "";
+        switch (operation) {
+          case "factorial":
+            result = `Factorial of ${num} is ${factorial(num)}`;
+            break;
+          case "palindrome":
+            result = isPalindrome(num)
+              ? `${num} is a Palindrome`
+              : `${num} is not a Palindrome`;
+            break;
+          case "prime":
+            result = isPrime(num)
+              ? `${num} is a Prime number`
+              : `${num} is not a Prime number`;
+            break;
+          case "strong":
+            result = isStrong(num)
+              ? `${num} is a Strong number`
+              : `${num} is not a Strong number`;
+            break;
+          case "armstrong":
+            result = isArmstrong(num)
+              ? `${num} is an Armstrong number`
+              : `${num} is not an Armstrong number`;
+            break;
+          case "perfect":
+            result = isPerfect(num)
+              ? `${num} is an Perfect number`
+              : `${num} is not an Perfect number`;
+            break;
+          default:
+            result = "Invalid operation selected.";
+        }
+
+        document.getElementById("result").innerText = result;
+      }
+
+      function factorial(n) {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+          fact *= i;
+        }
+        return fact;
+      }
+
+      function isPalindrome(n) {
+        const str = n.toString();
+        return str === str.split("").reverse().join("");
+      }
+
+      function isPrime(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= n / 2; i++) {
+          if (n % i === 0) return false;
+        }
+        return true;
+      }
+
+      function isStrong(n) {
+        const digits = n.toString().split("");
+        let sum = 0;
+        for (const digit of digits) {
+          sum += factorial(parseInt(digit));
+        }
+        return sum === n;
+      }
+
+      function isArmstrong(n) {
+        const digits = n.toString().split("");
+        const power = digits.length;
+        let sum = 0;
+        for (const digit of digits) {
+          sum += Math.pow(parseInt(digit), power);
+        }
+        return sum === n;
+      }
+      function isPerfect(n) {
+        i = 1;
+        sum = 0;
+        while (i < n) {
+          if (n % i == 0) {
+            sum = sum + i;
+          }
+          i++;
+        }
+        if (n == sum) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

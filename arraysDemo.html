@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      numbers = [1, 2, 3, 4, 5, 6];
+      numbers.push(7);
+      numbers.pop();
+      numbers.shift();
+      numbers.unshift(1); //Adding to the beginning
+      for (i = 0; i < numbers.length; i++) {
+        console.debug(numbers[i]);
+      }
+      for (num of numbers) {
+        console.log(num);
+      }
+      numbers.forEach((element) => {
+        console.log(element);
+      });
+    </script>
+  </body>
+</html>

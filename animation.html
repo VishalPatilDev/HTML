@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --defaultcolor: azure;
+        --defaultShadow: 0px 0px 10px 10px green;
+        --defaultHover: burlywood;
+      }
+      body {
+        background-color: greenyellow;
+      }
+      .container {
+        /* background-color: antiquewhite; */
+        display: flex;
+        justify-content: space-between;
+      }
+      .box {
+        width: 250px;
+        height: 250px;
+        /* margin: 0px 10px; */
+        background-color: azure;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        position: relative;
+        /* animation-name: v1; */
+
+        animation-name: v2;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        /* animation-delay: 5s; */
+      }
+      #box1:hover {
+        background-color: var(--defaultHover);
+      }
+      #box2:hover {
+        background-color: dodgerblue;
+      }
+      #box3:hover {
+        background-color: var(--defaultHover);
+      }
+      #box4:hover {
+        background-color: dodgerblue;
+      }
+      #box1 {
+        background-color: var(--defaultcolor);
+        box-shadow: var(--defaultShadow);
+      }
+      #box2 {
+        background-color: cornflowerblue;
+        box-shadow: var(--defaultShadow);
+      }
+      #box3 {
+        background-color: var(--defaultcolor);
+        box-shadow: var(--defaultShadow);
+      }
+      #box4 {
+        background-color: cornflowerblue;
+        box-shadow: var(--defaultShadow);
+      }
+
+      @keyframes v2 {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        25% {
+          top: 250px;
+          left: 0px;
+        }
+        50% {
+          top: 250px;
+          left: 250px;
+        }
+        100% {
+          top: 0px;
+          left: 250px;
+        }
+      }
+      @keyframes v1 {
+        from {
+          height: 250px;
+        }
+        to {
+          height: 700px;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="box" id="box1">This is a box1</div>
+      <div class="box" id="box2">This is a box2</div>
+      <div class="box" id="box3">This is a box3</div>
+      <div class="box" id="box4">This is a box4</div>
+    </div>
+  </body>
+</html>

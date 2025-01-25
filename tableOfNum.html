@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        background-color: bisque;
+        /* height: 100vh; */
+      }
+      .div {
+        border: 2px solid black;
+        background-color: beige;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+        /* width: 400px;
+        height: 600px; */
+      }
+      #tbl {
+        /* margin: 10px; */
+        border-collapse: collapse;
+      }
+      #tbl td {
+        /* margin: 10px;   */
+        border: 1px solid black;
+        padding: 5px 10px;
+        text-align: center;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      Enter a num:
+      <input type="text" id="inp" />
+      <button onclick="printTable()">Generate Tables</button>
+
+      <button onclick="changeColor('red')">Red</button>
+      <button onclick="changeColor('blue')">Blue</button>
+      <button onclick="changeColor('gray')">Gray</button>
+      <button onclick="changeColor('green')">Green</button>
+      <span id="result"></span>
+    </div>
+
+    <script>
+      function changeColor(op) {
+        const table = document.getElementById("tbl");
+        if (table) {
+          table.style.color = op;
+          table.style.border = `2px solid ${op}`;
+        }
+      }
+
+      function printTable() {
+        const num = parseInt(document.getElementById("inp").value);
+        if (isNaN(num)) {
+          alert("Please enter a valid number!");
+          return;
+        }
+        let str = "<table class='tbl' id='tbl'>";
+        for (let n = num; n <= num + 10; n++) {
+          str += `<tr><td colspan="5"><b>Table of ${n}</b></td></tr>`;
+          for (let i = 1; i <= 10; i++) {
+            const res = n * i;
+            str += `<tr><td>${n}</td><td>*</td><td>${i}</td><td>=</td><td>${res}</td></tr>`;
+          }
+        }
+        str += "</table>";
+        document.getElementById("result").innerHTML = str;
+      }
+    </script>
+  </body>
+</html>

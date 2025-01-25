@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="xyz()">XYZ</button>
+    <button onclick="abc()">ABC</button>
+
+    <script>
+      a = 10;
+      function xyz() {
+        console.log("In xyz()" + a);
+        var a = 30;
+        console.log(typeof a);
+
+        {
+          let b = 20; //
+          console.debug(b);
+        }
+        {
+          const c = 50;
+          console.debug(c);
+          //   c = 60;
+          //   console.debub(c);
+        }
+
+        console.log("In xyz()" + a);
+      }
+      function abc() {
+        console.log("In abc()" + a);
+        a = 60;
+        console.log("In abc()" + a);
+      }
+    </script>
+  </body>
+</html>

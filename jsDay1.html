@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Day of JavaScript</title>
+  </head>
+  <body>
+    <h1>Welcome to JavaScript!</h1>
+    <button onclick="img()">Click Me</button>
+    <img
+      height="400px"
+      src="https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649"
+      alt=""
+      id="img1"
+    />
+
+    <script>
+      //   let status = true;
+      //   function img() {
+      //     status
+      //       ? (document.getElementById("img1").src =
+      //           "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg")
+      //       : (document.getElementById("img1").src =
+      //           "https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649");
+      //     status = !status;
+      //   }
+      function img() {
+        if (
+          document.getElementById("img1").src ==
+          "https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649"
+        ) {
+          document.getElementById("img1").src =
+            "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg";
+        } else {
+          document.getElementById("img1").src =
+            "https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649";
+        }
+      }
+    </script>
+  </body>
+</html>
