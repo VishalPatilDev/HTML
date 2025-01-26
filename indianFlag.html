@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        height: 100vh;
+        background-color: azure;
+        justify-content: center;
+        /* align-items: center; */
+        display: flex;
+      }
+      .stick {
+        width: 5px;
+        height: 700px;
+        background-color: black;
+      }
+      .container {
+        width: 450px;
+        height: 300px;
+        border: 2px solid black;
+      }
+      .orange {
+        width: 100%;
+        height: 100px;
+        background-color: orange;
+      }
+      .white {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .green {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: green;
+      }
+      .ac {
+        opacity: 0;
+        animation-name: c1;
+        animation-duration: 3s;
+        animation-delay: 0ms;
+        animation-iteration-count: infinite;
+      }
+      #hid {
+        margin-right: 100px;
+        width: 100px;
+        animation-name: h;
+        color: white;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes h {
+        from {
+          color: white;
+        }
+        to {
+          color: tomato;
+        }
+      }
+      @keyframes c1 {
+        0% {
+          opacity: 40;
+        }
+        25% {
+          opacity: 30;
+        }
+        50% {
+          opacity: 15;
+        }
+        75% {
+          opacity: 7;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+    <div id="hid">
+      <h1>Happy Independence Day !</h1>
+    </div>
+    <div class="stick"></div>
+    <div class="container">
+      <div class="orange"></div>
+      <div class="white">
+        <div class="ac">
+          <img
+            width="100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/1200px-Ashoka_Chakra.svg.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="green">
+        <div class="ac"></div>
+      </div>
+    </div>
+  </body>
+</html>
